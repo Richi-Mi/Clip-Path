@@ -1,0 +1,93 @@
+body, html{
+    padding: 0;
+    margin: 0;
+}
+.texto{
+    background: lightgrey;
+    width: 70vw;
+    margin: 50px auto;
+    padding: 30px;
+    box-sizing: border-box;
+}
+.texto p{
+    font-size: 2rem;
+}
+/* -nav-*/
+.contenedor-menu{
+    position: fixed;
+    background: #396962;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    text-align: center;
+    top: 0;
+    clip-path: circle(5% at 50% 0);
+    transition: .5s clip-path ease;
+}
+.contenedor-menu.active{
+    clip-path: circle(111.6% at 50% 0);
+}
+.contenedor-menu.active li{
+    animation: dez 1s ease;
+}
+@keyframes dez{
+    from{
+        transform: translateY(1000px);
+    }
+    to{
+        transform: translateY(0px);
+    }
+}
+.btn-abrir{
+    font-size: 20px;
+    margin: 7px 10px 10px 10px;
+    padding: 0 10px 10px 10px;
+    cursor: pointer;
+}
+.btn-abrir:hover{
+    animation: rotar 1.5s alternate;
+}
+.elemento-nav{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.elemento-nav ul li{
+    list-style: none;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+.elemento-nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 40px;
+    letter-spacing: 2px;
+    padding: 10px 30px;
+    text-transform: uppercase;
+    transition: .2s all ease;
+}
+.elemento-nav ul li a:hover{
+    background: #030;
+}
+@keyframes rotar{
+    0%{
+        transform: rotate(0deg);
+    }
+    20%{
+        transform: rotate(10deg);
+    }
+    40%{
+        transform: rotate(-15deg);
+    }
+    60%{
+        transform: rotate(15deg);
+    }
+    80%{
+        transform:rotate(-15deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
